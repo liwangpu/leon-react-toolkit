@@ -1,0 +1,15 @@
+{
+  "name": "leon-rc-toolkit",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "core-js": "^3.6.4",
+    "antd": "^5.8.6",
+    "lodash": "^4.17.21",
+    "rxjs": "^7.8.1",
+    "sortablejs": "^1.15.0",
+    "classnames": "^2.3.2",
+    "mobx-react-lite": "^3.4.3",
+    "@ant-design/icons": "^5.2.5",
+    "react-router-dom": "^6.11.2"
+  }
+}

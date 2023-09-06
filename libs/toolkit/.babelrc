@@ -3,7 +3,9 @@
     [
       "@nx/react/babel",
       {
-        "runtime": "automatic"
+        "targets": "> 0.25%, not dead",
+        "useBuiltIns": false,
+        "corejs": 3
       }
     ]
   ],

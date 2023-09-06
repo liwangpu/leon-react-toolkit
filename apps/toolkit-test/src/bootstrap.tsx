@@ -5,6 +5,7 @@ import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import App from './app';
 
 const Home = React.lazy(() => import('./app/pages/Home'));
+const Test = React.lazy(() => import('./app/pages/Test'));
 
 
 function WrapperSuspense(WrappedComponent: React.ComponentType) {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: 'home',
         element: WrapperSuspense(Home),
+      },
+      {
+        path: 'test',
+        element: WrapperSuspense(Test),
       },
       {
         index: true,

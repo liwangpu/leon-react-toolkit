@@ -5,7 +5,7 @@ const Page: React.FC = memo(props => {
 
   return (
     <SimplePage>
-      Home
+      test
     </SimplePage>
   );
 });
