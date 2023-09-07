@@ -1,0 +1,46 @@
+{
+  "name": "my-rc-lib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/my-rc-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/my-rc-lib/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/my-rc-lib",
+        "tsConfig": "libs/my-rc-lib/tsconfig.lib.json",
+        "project": "libs/my-rc-lib/package.json",
+        "entryFile": "libs/my-rc-lib/lib/index.ts",
+        "external": [
+          "react",
+          "react-dom",
+          "react/jsx-runtime"
+        ],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/my-rc-lib/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}

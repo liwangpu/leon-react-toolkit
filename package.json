@@ -5,7 +5,9 @@
   "scripts": {
     "start": "npm run start:toolkit-test",
     "start:toolkit-test": "nx serve toolkit-test",
-    "build": "nx build toolkit",
+    "build": "npm run build:my-rc-lib",
+    "build:toolkit": "nx build toolkit",
+    "build:my-rc-lib": "nx build my-rc-lib",
     "publish": "cd ./dist/libs/toolkit & npm publish"
   },
   "private": true,
@@ -25,14 +27,14 @@
   "devDependencies": {
     "@babel/core": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
-    "@nx/cypress": "16.7.4",
-    "@nx/eslint-plugin": "16.7.4",
+    "@nx/cypress": "16.8.0",
+    "@nx/eslint-plugin": "16.8.0",
     "@types/lodash": "^4.14.195",
-    "@nx/jest": "16.7.4",
-    "@nx/js": "16.7.4",
-    "@nx/linter": "16.7.4",
-    "@nx/react": "16.7.4",
-    "@nx/workspace": "16.7.4",
+    "@nx/jest": "16.8.0",
+    "@nx/js": "16.8.0",
+    "@nx/linter": "16.8.0",
+    "@nx/react": "16.8.0",
+    "@nx/workspace": "16.8.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@rollup/plugin-url": "^7.0.0",
     "@svgr/rollup": "8.0.1",
@@ -45,7 +47,7 @@
     "@typescript-eslint/eslint-plugin": "5.60.1",
     "@typescript-eslint/parser": "5.60.1",
     "babel-jest": "^29.4.1",
-    "cypress": "12.16.0",
+    "cypress": "^13.0.0",
     "eslint": "8.46.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "2.13.4",
@@ -55,7 +57,7 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "jest": "^29.4.1",
     "jest-environment-jsdom": "^29.4.1",
-    "nx": "16.7.4",
+    "nx": "16.8.0",
     "nx-cloud": "16.3.0",
     "prettier": "^2.6.2",
     "react-refresh": "^0.10.0",
@@ -63,7 +65,7 @@
     "ts-node": "10.9.1",
     "typescript": "5.1.6",
     "url-loader": "^4.1.1",
-    "@nx/rollup": "16.7.4",
-    "@nx/webpack": "16.7.4"
+    "@nx/rollup": "16.8.0",
+    "@nx/webpack": "16.8.0"
   }
 }
