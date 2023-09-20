@@ -6,6 +6,7 @@
     "start": "npm run start:toolkit-test",
     "start:toolkit-test": "nx serve toolkit-test",
     "build": "npm run build:my-rc-lib",
+    "build:toolkit-test": "nx build toolkit-test",
     "build:toolkit": "nx build toolkit",
     "build:my-rc-lib": "nx build my-rc-lib",
     "publish": "cd ./dist/libs/toolkit & npm publish"
